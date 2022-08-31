@@ -8,64 +8,73 @@
     <title>Oxygen Shop</title>
   </head>
   <body>
-    <header>
-      <h1>OXYGEN SHOP</h1>
-      <nav>
-        <ul>
-          <li><a href="#">WHY US</a></li>
-          <li><a href="#">BENEFITS</a></li>
-          <li><a href="#">PRICES</a></li>
-          <li><a href="#">CONTACT</a></li>
-        </ul>
+    <header class="header">
+      <h1 class="header__title">OXYGENShop</h1>
+      <img src="./img/menu.png" alt="" class="header__button" />
+
+      <nav class="navbar">
+        <div class="navbar__brand">
+          <img src="" alt="" />
+        </div>
+        <div class="navbar__list">
+          <ul>
+            <li><a href="#">WHY US</a></li>
+            <li><a href="#">BENEFITS</a></li>
+            <li><a href="#">PRICES</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main>
-      <section>
+      <section class="sell">
         <h2>Sell More!</h2>
-        <p>Open shop on our platform and increase your sales</p>
-        <button>
+        <p class="sell__text">
+          Open shop on our platform and increase your sales
+        </p>
+        <button class="sell__button">
           <a href="#"> Open your shop </a>
         </button>
-        <img src="./img/background.png" alt="background" />
+        <img src="./img/background.png" alt="background" class="sell__img" />
         <h3>The most popular sales platform in country</h3>
-        <div>
-          <img src="#" alt="" />
-          <p>100000+</p>
+        <div class="sell__description">
+          <img src="./img/person.png" alt="" />
+          <p class="sell__text--strong">100000+</p>
           <p>daily entries</p>
         </div>
-        <div>
-          <img src="#" alt="" />
-          <p>2000000+</p>
+        <div class="sell__description">
+          <img src="./img/eye.png" alt="" />
+          <p class="sell__text--strong">2000000+</p>
           <p>seen products every day</p>
-        </div>
-        <div>
-          <img src="#" alt="" />
-          <p>10000+</p>
+        </divc>
+        <div class="sell__description">
+          <img src="./img/posts.png" alt="" />
+          <p class="sell__text--strong">10000+</p>
           <p>added posts daily</p>
         </div>
       </section>
-      <section>
-        <article>
+      <section class="articles">
+        <article class="articles__item">
           <img src="" alt="" />
-          <h2>Be always first</h2>
-          <p>
+          <h3>Be always first</h3>
+          <p class="articles__item__text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam.
           </p>
         </article>
-        <article>
+        <article class="articles__item">
           <img src="" alt="" />
-          <h2>Your shop is where you are!</h2>
-          <p>
+          <h3>Your shop is where you are!</h3>
+          <p class="articles__item__text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam.
           </p>
         </article>
-        <article>
-          <h2>Increase recognition your brand!</h2>
-          <p>
+        <article class="articles__item">
+          <h3>Increase recognition your brand!</h3>
+          <p class="articles__item__text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam.
@@ -73,180 +82,188 @@
           <img src="#" alt="" />
         </article>
       </section>
-      <section>
-        <h2>Pricing</h2>
-        <div>
-          <div>
-            <h4>Basic</h4>
-            <p>$0</p>
+      <section class="price">
+        <h2 class="price__title">Pricing</h2>
+        <div class="price__section--red">
+          <div class="container">
+            <div class="container__title">
+              <h4>Basic</h4>
+              <p>$0</p>
+            </div>
+            <ul>
+              <li>
+                <p>
+                  <input type="checkbox" name="" id="" checked disabled /> 100MB
+                  HDD
+                </p>
+              </li>
+              <li>
+                <p>
+                  <input type="checkbox" name="" id="" checked disabled />
+                  1 Subdomain
+                </p>
+              </li>
+              <li>
+                <p>
+                  <input type="checkbox" name="" id="" checked disabled />
+                  2 E-mails
+                </p>
+              </li>
+              <li>
+                <p>
+                  <input type="checkbox" name="" id="" checked />
+                  Two years license
+                </p>
+              </li>
+              <li>
+                <p>
+                  <input type="checkbox" name="" id="" checked />
+                  Full support
+                </p>
+              </li>
+            </ul>
           </div>
-          <ul>
-            <li>
-              <p>
-                <input type="checkbox" name="" id="" checked disabled /> 100MB
-                HDD
-              </p>
-            </li>
-            <li>
-              <p>
-                <input type="checkbox" name="" id="" checked disabled />
-                1 Subdomain
-              </p>
-            </li>
-            <li>
-              <p>
-                <input type="checkbox" name="" id="" checked disabled />
-                2 E-mails
-              </p>
-            </li>
-            <li>
-              <p>
-                <input type="checkbox" name="" id="" checked />
-                Two years license
-              </p>
-            </li>
-            <li>
-              <p>
-                <input type="checkbox" name="" id="" checked />
-                Full support
-              </p>
-            </li>
-          </ul>
           <button>
             <a href="#">Begin</a>
           </button>
         </div>
 
-        <div>
-          <div>
-            <h4>Professional</h4>
-            <p>$25</p>
-            <p>Limited offer</p>
+        <div class="price__section--blue">
+          <div class="container">
+            <div class="container__title">
+              <h4>Professional</h4>
+              <p>$25</p>
+              <p id="limited">Limited offer</p>
+            </div>
+            <ul>
+              <li>
+                <p>
+                  <input type="checkbox" name="" id="" checked disabled />
+                  500 MB HDD
+                </p>
+              </li>
+              <li>
+                <p>
+                  <input type="checkbox" name="" id="" checked disabled />
+                  2 Subdomain
+                </p>
+              </li>
+              <li>
+                <p>
+                  <input type="checkbox" name="" id="" checked disabled />
+                  5 E-mails
+                </p>
+              </li>
+              <li>
+                <p>
+                  <input type="checkbox" name="" id="" checked />
+                  One year license
+                </p>
+              </li>
+              <li>
+                <p>
+                  <input type="checkbox" name="" id="" checked />
+                  Full support
+                </p>
+              </li>
+            </ul>
           </div>
-          <ul>
-            <li>
-              <p>
-                <input type="checkbox" name="" id="" checked disabled />
-                500 MB HDD
-              </p>
-            </li>
-            <li>
-              <p>
-                <input type="checkbox" name="" id="" checked disabled />
-                2 Subdomain
-              </p>
-            </li>
-            <li>
-              <p>
-                <input type="checkbox" name="" id="" checked disabled />
-                5 E-mails
-              </p>
-            </li>
-            <li>
-              <p>
-                <input type="checkbox" name="" id="" checked />
-                One year license
-              </p>
-            </li>
-            <li>
-              <p>
-                <input type="checkbox" name="" id="" checked />
-                Full support
-              </p>
-            </li>
-          </ul>
           <button>
             <a href="#">Begin</a>
           </button>
         </div>
 
-        <div>
-          <div>
-            <h4>Premium</h4>
-            <p>$60</p>
-            <p>Limited offer</p>
+        <div class="price__section--green">
+          <div class="container">
+            <div class="container__title">
+              <h4>Premium</h4>
+              <p>$60</p>
+              <p id="limited">Limited offer</p>
+            </div>
+            <ul>
+              <li>
+                <p>
+                  <input type="checkbox" name="" id="" checked disabled />
+                  2 GB HDD
+                </p>
+              </li>
+              <li>
+                <p>
+                  <input type="checkbox" name="" id="" checked disabled />
+                  5 Subdomain
+                </p>
+              </li>
+              <li>
+                <p>
+                  <input type="checkbox" name="" id="" checked disabled />
+                  20 E-mails
+                </p>
+              </li>
+              <li>
+                <p>
+                  <input type="checkbox" name="" id="" checked />
+                  Two years license
+                </p>
+              </li>
+              <li>
+                <p>
+                  <input type="checkbox" name="" id="" checked />
+                  Full support
+                </p>
+              </li>
+            </ul>
           </div>
-          <ul>
-            <li>
-              <p>
-                <input type="checkbox" name="" id="" checked disabled />
-                2 GB HDD
-              </p>
-            </li>
-            <li>
-              <p>
-                <input type="checkbox" name="" id="" checked disabled />
-                5 Subdomain
-              </p>
-            </li>
-            <li>
-              <p>
-                <input type="checkbox" name="" id="" checked disabled />
-                20 E-mails
-              </p>
-            </li>
-            <li>
-              <p>
-                <input type="checkbox" name="" id="" checked />
-                Two years license
-              </p>
-            </li>
-            <li>
-              <p>
-                <input type="checkbox" name="" id="" checked />
-                Full support
-              </p>
-            </li>
-          </ul>
           <button>
             <a href="#">Begin</a>
           </button>
         </div>
       </section>
-      <section>
-        <h2>Any questions?</h2>
+      <section class="contact">
+        <h2 class="contact__title">Any questions?</h2>
         <p>Leave your email address or call us!</p>
-        <address>
-          <p>
-            <img src="#" alt="" />
+        <address class="contact__address">
+          <div class="contact__address__container">
+            <img src="./img/mail.png" alt="" />
             <a href="mailto:info@bestshop.xyz"> info@bestshop.xyz </a>
-          </p>
-          <p>
-            <img src="#" alt="" />
+          </div>
+          <div class="contact__address__container">
+            <img src="./img/tel.png" alt="" />
             <a href="tel:123456789">123 456 789</a>
-          </p>
+          </div>
         </address>
-        <form action="">
+        <form action="" class="contact__form">
           <label for="name">NAME</label>
           <input type="text" name="name" id="name" />
           <label for="email">EMAIL</label>
           <input type="email" name="email" id="email" />
-          <label for="">
-            <input type="checkbox" name="" id="" />
-            I hereby give consent for my personal data included in my
-            application to be processed for the purposes of the recruitment
-            process under the European Parliament’s and Council of the European
-            Union Regulation on the Protection of Natural Persons as of 27 April
-            2016, with regard to the processing of personal data and on the free
-            movement of such data, and repealing Directive 95/46/EC (Data
-            Protection Directive)
-          </label>
+          <div class="contact__form__policy">
+            <input type="checkbox" name="policy" id="policy" />
+            <label for="policy" id="policy">
+              I hereby give consent for my personal data included in my
+              application to be processed for the purposes of the recruitment
+              process under the European Parliament’s and Council of the
+              European Union Regulation on the Protection of Natural Persons as
+              of 27 April 2016, with regard to the processing of personal data
+              and on the free movement of such data, and repealing Directive
+              95/46/EC (Data Protection Directive)
+            </label>
+          </div>
+
           <button>Send</button>
         </form>
       </section>
     </main>
-    <footer>
-      `
-      <div>
+    <footer class="footer">
+      <div class="footer__title">
         <h1>OXYGENShop</h1>
         <p>&copy; 2022 OXYGEN, All Rights Reserved</p>
       </div>
-      <div>
-        <a href="">
-          <img src="#" alt="" />
+      <div class="footer__links">
+        <a href="https://twitter.com">
+          <img src="./img/twitter.png" alt="" />
         </a>
-        <a href="">
-          <img src="#" alt="" />
+        <a href="https://facebook.com">
+          <img src="./img/facebook.png" alt="" />
         </a>
       </div>
     </footer>
