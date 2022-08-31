@@ -138,6 +138,7 @@ a:visited {
   display: inline-block;
   width: 100%;
   height: 267px;
+  background-image: url("./img/background.png");
 }
 .sell h3 {
   font-family: "Raleway";
@@ -471,12 +472,15 @@ a:visited {
   margin-top: 20px;
   margin-bottom: 20px;
   border: none;
+  outline: none;
+  padding: 0.3rem 1rem;
   border-bottom: 1px solid #95989a;
 }
 .contact__form__policy {
   margin-top: 31px;
   display: flex;
   flex-direction: row;
+  gap: 1rem;
 }
 .contact__form__policy #policy {
   font-family: "Raleway";
@@ -487,7 +491,9 @@ a:visited {
   color: #707070;
 }
 .contact__form__policy input {
-  justify-self: flex-start;
+  width: 24px;
+  height: 24px;
+  align-items: flex-start;
 }
 .contact__form button {
   border: none;
@@ -530,6 +536,150 @@ a:visited {
   justify-content: center;
   padding-left: 10px;
   gap: 1rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  .header {
+    display: flex;
+    padding-right: 7rem;
+    padding-left: 7rem;
+  }
+  .header__button {
+    display: none;
+  }
+  .header__title {
+    flex-grow: 1;
+  }
+  .header .navbar {
+    display: flex;
+    place-items: center;
+  }
+  .header .navbar__list ul {
+    place-items: center;
+    display: flex;
+    gap: 5rem;
+  }
+  .header .navbar__list ul li {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 3.28px;
+    text-transform: uppercase;
+    color: #a5a5a5;
+  }
+  .header .navbar__list ul li :hover {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 3.28px;
+    text-transform: uppercase;
+    color: #000000;
+    border-bottom: 4px solid #08a6e4;
+  }
+  main {
+    padding-top: 8rem;
+  }
+  .sell__img {
+    background-image: url("./img/desktopBackground.png");
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 594px;
+  }
+  .sell__container {
+    width: 100%;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    gap: 10rem;
+  }
+  .articles {
+    padding: 105px 252px;
+  }
+  .articles__item {
+    display: flex;
+    height: 370px;
+    place-items: center;
+  }
+  .articles__item__title--red:after {
+    content: "";
+    display: block;
+    margin: 0 1rem;
+    width: 324px;
+    padding-top: 20px;
+    border-bottom: 4px solid #fb3b64;
+  }
+  .articles__item__title--blue:after {
+    content: "";
+    display: block;
+    margin: 0 1rem;
+    width: 324px;
+    padding-top: 20px;
+    border-bottom: 4px solid #08a6e4;
+  }
+  .articles__item__title--green:after {
+    content: "";
+    display: block;
+    margin: 0 1rem;
+    width: 324px;
+    padding-top: 20px;
+    border-bottom: 4px solid #55dfb4;
+  }
+  .articles__item img {
+    object-fit: contain;
+  }
+  .price__title {
+    margin-bottom: 3rem;
+  }
+  .price__sections__container {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+  }
+  .price__sections__container .container {
+    display: flex;
+    flex-direction: column;
+    width: 372px;
+    margin-bottom: 2rem;
+  }
+  .price__sections__container .container__title {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+  }
+  .price__sections__container .container ul {
+    place-items: center;
+  }
+  .contact {
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+  }
+  .contact address {
+    justify-content: flex-start;
+    display: flex;
+    gap: 2rem;
+  }
+  .contact form {
+    max-width: 30%;
+  }
+  .footer {
+    display: flex;
+    place-items: center;
+    padding: 1rem 8rem;
+  }
+  .footer__title {
+    flex-grow: 1;
+  }
+  .footer__links {
+    justify-content: flex-end;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
