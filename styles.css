@@ -641,10 +641,12 @@ a:visited {
     display: flex;
     justify-content: center;
     gap: 4rem;
+    width: 100%;
   }
   .price__sections__container .container {
     display: flex;
     flex-direction: column;
+    min-width: 200px;
     width: 372px;
     margin-bottom: 2rem;
   }
