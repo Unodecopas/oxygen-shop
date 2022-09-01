@@ -569,6 +569,15 @@ a:visited {
   }
 }
 
+.percentage__scroller {
+  top: 0;
+  height: 4px;
+  background: linear-gradient(90deg, $blue 25%, $green 100%);
+  position: fixed;
+  z-index: 4;
+  transition: 200ms;
+}
+
 @media only screen and (min-width: 1000px) {
   .header {
     display: flex;
