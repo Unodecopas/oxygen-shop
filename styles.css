@@ -538,6 +538,38 @@ a:visited {
   gap: 1rem;
 }
 
+.scroll__up {
+  position: fixed;
+  background-color: white;
+  right: 1rem;
+  bottom: 1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #08a6e4;
+  transition: 200ms;
+  z-index: 2;
+}
+.scroll__up__icon {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: #08a6e4;
+  stroke: #08a6e4;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.scroll__up__icon:hover {
+  stroke: white;
+}
+.scroll__up:hover {
+  background-color: #08a6e4;
+  fill: white;
+  stroke: white;
+}
+
 @media only screen and (min-width: 1000px) {
   .header {
     display: flex;
@@ -681,6 +713,37 @@ a:visited {
   }
   .footer__links {
     justify-content: flex-end;
+  }
+  .scroll__up {
+    position: fixed;
+    background-color: white;
+    right: 1rem;
+    bottom: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #08a6e4;
+    transition: 200ms;
+    z-index: 2;
+  }
+  .scroll__up__icon {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: #08a6e4;
+    stroke: #08a6e4;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .scroll__up__icon:hover {
+    stroke: white;
+  }
+  .scroll__up:hover {
+    background-color: #08a6e4;
+    fill: white;
+    stroke: white;
   }
 }
 

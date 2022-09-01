@@ -537,6 +537,38 @@ a:visited {
   }
 }
 
+.scroll__up {
+  position: fixed;
+  background-color: white;
+  right: 1rem;
+  bottom: 1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid $blue;
+  transition: 200ms;
+  z-index: 2;
+  &__icon {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: $blue;
+    stroke: $blue;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    &:hover {
+      stroke: white;
+    }
+  }
+  &:hover {
+    background-color: $blue;
+    fill: white;
+    stroke: white;
+  }
+}
+
 @media only screen and (min-width: 1000px) {
   .header {
     display: flex;
@@ -683,6 +715,37 @@ a:visited {
     }
     &__links {
       justify-content: flex-end;
+    }
+  }
+  .scroll__up {
+    position: fixed;
+    background-color: white;
+    right: 1rem;
+    bottom: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid $blue;
+    transition: 200ms;
+    z-index: 2;
+    &__icon {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      fill: $blue;
+      stroke: $blue;
+      stroke-width: 2px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      &:hover {
+        stroke: white;
+      }
+    }
+    &:hover {
+      background-color: $blue;
+      fill: white;
+      stroke: white;
     }
   }
 }
