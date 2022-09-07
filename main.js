@@ -66,13 +66,15 @@ modal.addEventListener("click", (e) => {
 
 //VALIDACION FORMULARIO
 const validateNameLength = () => {
-  if (inputName.value.length > 2 && inputName.value.length <= 100){
+  if (inputName.value.length >= 2 && inputName.value.length <= 100){
     inputName.setAttribute("style", "  border-bottom: 1px solid var(--grey)");
+    return true
   }else {
     inputName.setAttribute(
         "style",
         "border:1px solid red ; padding: 7px ; border-radius: 10px"
       )
+    return false
   }
 }
 const validateEmail = () => {
@@ -82,9 +84,10 @@ const validateEmail = () => {
         "style",
         "border:1px solid red ; padding: 7px ; border-radius: 10px"
       );
+      return false
   }else {
     inputEmail.setAttribute("style", "  border-bottom: 1px solid var(--grey)");
-
+    return true
   }
 }
 
@@ -96,7 +99,8 @@ inputEmail.addEventListener("input", validateEmail);
 
 const submitForm = async (e) => {
   e.preventDefault()
-  try {
+  if(validateEmail() && validateNameLength()){
+    try {
     const res = await fetch("https://jsonplaceholder.typicode.com/posts",{
       method: 'POST',
       headers: {
@@ -106,11 +110,16 @@ const submitForm = async (e) => {
     })
     if (res.ok){
       const data = await res.json()
-      console.log(data)
+      console.log(data);
+      alert('Gracias por subscribirte')
     }
   } catch (error) {
     console.log(error.message)
   }
+  }else {
+    alert('Rellena los campos correctamente')
+  }
+  
 }
 
 btnSubmit.addEventListener('click', submitForm)
