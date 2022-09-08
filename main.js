@@ -72,7 +72,7 @@ const validateNameLength = () => {
   }else {
     inputName.setAttribute(
         "style",
-        "border:1px solid red ; padding: 7px ; border-radius: 10px"
+        "border:1px solid red ; border-radius: 10px"
       )
     return false
   }
@@ -82,7 +82,7 @@ const validateEmail = () => {
   if (!inputEmail.value.match(regex)){
     inputEmail.setAttribute(
         "style",
-        "border:1px solid red ; padding: 7px ; border-radius: 10px"
+        "border:1px solid red ; border-radius: 10px"
       );
       return false
   }else {

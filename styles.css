@@ -456,7 +456,7 @@ a:visited {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 22px;
   color: #a5a5a5;
 }
@@ -474,18 +474,19 @@ a:visited {
   width: 100%;
   margin-top: 20px;
   margin-bottom: 20px;
-  border: none;
+  border: 1px solid #fff;
+  border-radius: 10px;
   outline: none;
   padding: 0.3rem 1rem;
   border-bottom: 1px solid #95989a;
 }
 .contact__form__policy {
-  margin-top: 31px;
+  margin-top: 0px;
   display: flex;
   flex-direction: row;
   gap: 1rem;
 }
-.contact__form__policy #policy {
+.contact__form__policy label {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
@@ -494,6 +495,8 @@ a:visited {
   color: #707070;
 }
 .contact__form__policy input {
+  padding: 0;
+  margin: 0;
   width: 24px;
   height: 24px;
   align-items: flex-start;
@@ -632,16 +635,15 @@ a:visited {
 }
 
 .section__slide {
-  margin: 6.5rem auto;
   background-color: #a5a5a5;
 }
 
 .slide__viewer,
 #slider {
+  padding-top: 1rem;
   position: relative;
-  background: #a5a5a5;
-  max-width: 750px;
-  width: 100%;
+  background: #fff;
+  width: 50%;
   height: 450px;
   margin: 0 auto;
 }
@@ -689,7 +691,7 @@ a:visited {
 
 .slide__btn--right {
   left: auto;
-  right: 20px;
+  right: 10px;
 }
 
 .slide__btn:hover,
@@ -718,7 +720,7 @@ a:visited {
 .dotsContainer {
   display: block;
   position: absolute;
-  bottom: 75px;
+  bottom: 20px;
   right: 45%;
 }
 
@@ -784,11 +786,19 @@ a:visited {
     gap: 10rem;
   }
   .articles {
-    padding: 105px 252px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
   .articles__item {
     display: flex;
-    height: 370px;
+    width: 70%;
+    height: 100%;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
     place-items: center;
   }
   .articles__item__title--red:after {
@@ -816,7 +826,11 @@ a:visited {
     border-bottom: 4px solid #55dfb4;
   }
   .articles__item img {
+    height: 100%;
     object-fit: contain;
+  }
+  .price {
+    width: 100%;
   }
   .price__title {
     margin-bottom: 3rem;
@@ -840,6 +854,11 @@ a:visited {
   }
   .price__sections__container .container ul {
     place-items: center;
+  }
+  .price__section--red:hover,
+.price__section--blue:hover,
+.price__section--green:hover {
+    transform: scale(1.1);
   }
   .contact {
     padding-top: 5rem;
