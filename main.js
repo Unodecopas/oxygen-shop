@@ -8,7 +8,10 @@ const inputEmail = document.querySelector('#email')
 const btnSubmit = document.querySelector('#btn__submit')
 const btnHeader = document.querySelector('.header__button')
 const navbar = document.querySelector('.navbar')
-
+const select = document.querySelector(".price__currency__select ");
+const professional = document.querySelector("#professionalPrice");
+const premium = document.querySelector("#premiumPrice");
+const basic = document.querySelector("#basicPrice");
 //BUTTON FOR BACK TO TOP
 const toTop = () => {
   document.documentElement.scrollTo({
@@ -202,3 +205,38 @@ const showMenu = () => {
   navbar.classList.toggle('nav--visible')
 }
 btnHeader.addEventListener('click', showMenu)
+
+// currency exchange
+
+const apiExchange = `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json`;
+
+const getDataExchange = async () => {
+  const response = await fetch(apiExchange);
+  let data = await response.json();
+  return data;
+};
+
+
+getDataExchange().then((data) => {
+  select.addEventListener("change", (e) => {
+    switch (e.target.value) {
+      case "usd":
+        basic.textContent = "$0";
+        professional.textContent = "$25";
+        premium.textContent = "$60";
+        break;
+      case "eur":
+        basic.textContent = "€0";
+        professional.textContent =
+          "€" + parseFloat(25 * data.usd.eur).toFixed(2);
+        premium.textContent = "€" + parseFloat(60 * data.usd.eur).toFixed(2);
+        break;
+      case "gbp":
+        basic.textContent = "£0";
+        professional.textContent =
+          "£" + parseFloat(25 * data.usd.gbp).toFixed(2);
+        premium.textContent = "£" + parseFloat(60 * data.usd.gbp).toFixed(2);
+        break;
+    }
+  });
+});

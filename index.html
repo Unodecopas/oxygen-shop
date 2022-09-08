@@ -124,12 +124,19 @@
       </section>
       <section class="price" id="prices">
         <h2 class="price__title">Pricing</h2>
+        <div class="price__currency">
+          <select name="currency__select" class="price__currency__select">
+            <option value="gbp">GBP - ₤</option>
+            <option value="eur">EUR - €</option>
+            <option value="usd" selected>USD - $</option>
+          </select>
+        </div>
         <div class="price__sections__container">
         <div class="price__section--red">
           <div class="container">
             <div class="container__title">
               <h4>Basic</h4>
-              <p>$0</p>
+              <p id="basicPrice">$0</p>
             </div>
             <ul>
               <li class="price__success">100MB HDD</li>
@@ -148,7 +155,7 @@
           <div class="container">
             <div class="container__title">
               <h4>Professional</h4>
-              <p>$25</p>
+              <p id="professionalPrice">$25</p>
               <p id="limited">Limited offer</p>
             </div>
             <ul>
@@ -168,7 +175,7 @@
           <div class="container">
             <div class="container__title">
               <h4>Premium</h4>
-              <p>$60</p>
+              <p id="premiumPrice">$60</p>
               <p id="limited">Limited offer</p>
             </div>
             <ul>
